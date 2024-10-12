@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Atrasos - Colégio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Colégio Estadual Luiz Sebastião Baldo</h1>
+        <h2>Registro de Atrasos CElSB</h2>
+    </header>
+
+    <main>
+        <section class="turmas">
+            <h3>Selecione uma Turma para efetuar o registro</h3>
+            <div class="turma-list">
+                <div class="ano">
+                    <h4>6º Ano</h4>
+                    <div class="turma-buttons">
+                        <button class="turma-btn" data-turma="6A">6A</button>
+                        <button class="turma-btn" data-turma="6B">6B</button>
+                        <button class="turma-btn" data-turma="6C">6C</button>
+                        <button class="turma-btn" data-turma="6D">6D</button>
+                        <button class="turma-btn" data-turma="6E">6E</button>
+                        <button class="turma-btn" data-turma="6F">6F</button>
+                        <button class="turma-btn" data-turma="6G">6G</button>
+                    </div>
+                </div>
+                <div class="ano">
+                    <h4>7º Ano</h4>
+                    <div class="turma-buttons">
+                        <button class="turma-btn" data-turma="7A">7A</button>
+                        <button class="turma-btn" data-turma="7B">7B</button>
+                        <button class="turma-btn" data-turma="7C">7C</button>
+                        <button class="turma-btn" data-turma="7D">7D</button>
+                        <button class="turma-btn" data-turma="7E">7E</button>
+                        <button class="turma-btn" data-turma="7F">7F</button>
+                        <button class="turma-btn" data-turma="7G">7G</button>
+                    </div>
+                </div>
+                <div class="ano">
+                    <h4>8º Ano</h4>
+                    <div class="turma-buttons">
+                        <button class="turma-btn" data-turma="8A">8A</button>
+                        <button class="turma-btn" data-turma="8B">8B</button>
+                        <button class="turma-btn" data-turma="8C">8C</button>
+                        <button class="turma-btn" data-turma="8D">8D</button>
+                        <button class="turma-btn" data-turma="8E">8E</button>
+                        <button class="turma-btn" data-turma="8F">8F</button>
+                        <button class="turma-btn" data-turma="8G">8G</button>
+                    </div>
+                </div>
+                <div class="ano">
+                    <h4>9º Ano</h4>
+                    <div class="turma-buttons">
+                        <button class="turma-btn" data-turma="9A">9A</button>
+                        <button class="turma-btn" data-turma="9B">9B</button>
+                        <button class="turma-btn" data-turma="9C">9C</button>
+                        <button class="turma-btn" data-turma="9D">9D</button>
+                        <button class="turma-btn" data-turma="9E">9E</button>
+                        <button class="turma-btn" data-turma="9F">9F</button>
+                        <button class="turma-btn" data-turma="9G">9G</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal de Registro -->
+        <div id="registro-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Registrar Atraso - <span id="turma-atual"></span></h2>
+                <form id="registro-form">
+                    <label for="nome">Nome do Aluno:</label>
+                    <input type="text" id="nome" name="nome" required>
+
+                    <label for="numero">Número do Aluno:</label>
+                    <input type="number" id="numero" name="numero" required>
+
+                    <label for="data">Data:</label>
+                    <input type="date" id="data" name="data" required>
+
+                    <label for="hora">Horário de Chegada:</label>
+                    <input type="time" id="hora" name="hora" required>
+
+                    <button type="submit">Registrar</button>
+                </form>
+            </div>
+        </div>
+        
+        <div id="resultadosDiv">
+            <h4>Resultados:</h4>
+            <ul id="listaResultados"></ul>
+        </div>
+
+        <!-- Seção de Pesquisa de Registros -->
+        <section class="pesquisa">
+            <h3>Pesquisar Registros</h3>
+            <input type="text" id="turma-pesquisa" placeholder="Digite a turma (ex: 6A)">
+            <input type="text" id="nome-pesquisa" placeholder="Nome do Aluno">
+            <input type="number" id="numero-pesquisa" placeholder="Número do Aluno">
+            <button id="btn-pesquisar">Pesquisar</button>
+            <div id="resultados"></div>
+        </section>
+
+        <!-- Modal de Exibição de Registros -->
+        <div id="exibir-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Registros - <span id="turma-exibir"></span></h2>
+                <table id="tabela-registros">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Número</th>
+                            <th>Data</th>
+                            <th>Horário</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Registros serão inseridos aqui via JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

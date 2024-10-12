@@ -1,0 +1,228 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('celsb3.avif'); /* Imagem de fundo */
+    background-size: cover; /* Ajusta a imagem para cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    color: #333;
+}
+
+header {
+    background-color: rgba(0, 121, 107, 0.8); /* Cor do cabeçalho com transparência */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header h2 {
+    font-size: 1.5em;
+}
+
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.turmas {
+    margin-bottom: 20px;
+}
+
+.ano {
+    margin-bottom: 20px;
+}
+
+h4 {
+    margin-bottom: 10px;
+    color: #070202; /* Verde escuro */
+    font-size: 1.5em;
+    border-bottom: 2px solid #00796b; /* Linha inferior verde */
+    padding-bottom: 5px;
+}
+
+.turma-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.turma-btn {
+    padding: 10px 15px;
+    background-color: #00796b; /* Botão verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1em;
+}
+
+.turma-btn:hover {
+    background-color: #005b4f; /* Verde mais escuro no hover */
+    transform: translateY(-2px);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #0a0403; /* Cor do título */
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus {
+    border-color: #00796b; /* Verde no foco */
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #00796b; /* Verde no botão */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #005b4f; /* Verde mais escuro no hover */
+}
+
+.pesquisa {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#turma-pesquisa {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#btn-pesquisar {
+    padding: 10px;
+    background-color: #00796b; /* Botão de pesquisa verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#btn-pesquisar:hover {
+    background-color: #005b4f; /* Verde mais escuro no hover */
+}
+
+#resultados {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #00796b; /* Cabeçalho da tabela */
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Linhas pares */
+}
+
+tbody tr:hover {
+    background-color: #e0f2f1; /* Hover nas linhas */
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #000;
+}
